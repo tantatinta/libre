@@ -1,11 +1,39 @@
 /*
 COLORS:
 
-Light green/yellow: #7ed56f / #ffff33
-Medium green: #55c57a / #ffff1a
-Dark green: #28b485 / #ffff00
+Light green/yellow: #7ed56f / #ffcce6
+Medium green: #55c57a / #ff3399
+Dark green: #28b485 / #cc0066
 
 
 
 FONT: font-family: 'Quicksand', sans-serif;
 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4d4c4c;
+  padding: 25px;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+    to right bottom, 
+    rgba(255, 204, 230, 0.801), 
+    rgba(204, 0, 102, 0.801)), 
+    url('../img/hero.jpg');
+  background-size: cover;
+  background-position: top;
+  
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
