@@ -74,7 +74,7 @@ body {
 
   animation-name: moveInRight;
   animation-duration: 1s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-out;
 }
 
 .text-box {
@@ -100,7 +100,7 @@ body {
   }
 }
 
-@keyframes moveInRight{
+@keyframes moveInRight {
   0% {
     opacity: 0;
     transform: translateX(100px);
@@ -115,6 +115,17 @@ body {
   }
 }
 
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+ 
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -123,6 +134,7 @@ body {
   display: inline-block;
   border-radius: 100%;
   transition: all .2s;
+  position: relative;  
 }
 
 .btn:hover {
@@ -137,6 +149,32 @@ body {
 
 .btn-white {
   background-color: #ffffff;
-  color: #4d4c4c;
-  
+  color: #4d4c4c;  
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-white::after {
+  background-color: #ffffff;
+}
+
+.btn:hover::after {
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
 }
