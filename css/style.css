@@ -129,6 +129,10 @@ body {
   padding: 20rem 10rem 12rem 10rem;
   margin-top: -15vh; }
 
+.section-stories {
+  background-color: #f7f7f7;
+  padding: 15rem 0; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -179,9 +183,9 @@ body {
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 4rem 4rem;
+  padding: 2rem 4rem;
   display: inline-block;
-  border-radius: 100%;
+  border-radius: 100px;
   transition: all .2s;
   position: relative;
   font-size: 1.6rem; }
@@ -214,7 +218,7 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100%;
+  border-radius: 100px;
   position: absolute;
   top: 0;
   left: 0;
@@ -381,3 +385,51 @@ body {
   .card__price-value {
     font-size: 6rem;
     font-weight: 100; }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  transform: skewX(-10deg); }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(10deg);
+    position: relative;
+    overflow: hidden; }
+  .story__img {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: all .3s; }
+  .story__text {
+    transform: skewX(10deg); }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .3s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__img {
+    -webkit-filter: blur(5px);
+    filter: blur(3px) brightness(70%);
+    transform: translateX(-4rem) scale(1); }
