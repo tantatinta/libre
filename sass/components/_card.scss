@@ -17,7 +17,7 @@
     left: 0;
     width: 100%;
     backface-visibility: hidden;
-    border-radius: 3px;
+    border-radius: $border-radius-small;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
@@ -118,7 +118,7 @@
       list-style: none;
       width: 80%;
       margin: 0 auto;
-      color: $color-grey-dark;
+      color: $color-grey-dark-1;
       text-align: center;
 
       li {
